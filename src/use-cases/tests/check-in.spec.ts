@@ -44,7 +44,7 @@ describe('Check-in Use Case', () => {
     })
 
     const { checkIn } = await sut.execute({
-      gym_id: 'gym-id',
+      gymId: 'gym-id',
       user_id: 'user-id',
       userLatitude: -27.0747279,
       userLongitude: -49.4889672,
@@ -66,7 +66,7 @@ describe('Check-in Use Case', () => {
     })
 
     await sut.execute({
-      gym_id: 'gym-id',
+      gymId: 'gym-id',
       user_id: 'user-id',
       userLatitude: -27.0747279,
       userLongitude: -49.4889672,
@@ -74,7 +74,7 @@ describe('Check-in Use Case', () => {
 
     await expect(() =>
       sut.execute({
-        gym_id: 'gym-id',
+        gymId: 'gym-id',
         user_id: 'user-id',
         userLatitude: -27.0747279,
         userLongitude: -49.4889672,
@@ -95,7 +95,7 @@ describe('Check-in Use Case', () => {
     })
 
     await sut.execute({
-      gym_id: 'gym-id',
+      gymId: 'gym-id',
       user_id: 'user-id',
       userLatitude: -27.0747279,
       userLongitude: -49.4889672,
@@ -104,7 +104,7 @@ describe('Check-in Use Case', () => {
     vi.setSystemTime(new Date('2021-05-01 10:00:00'))
 
     const { checkIn } = await sut.execute({
-      gym_id: 'gym-id',
+      gymId: 'gym-id',
       user_id: 'user-id',
       userLatitude: -27.0747279,
       userLongitude: -49.4889672,
@@ -125,7 +125,7 @@ describe('Check-in Use Case', () => {
 
     await expect(() =>
       sut.execute({
-        gym_id: 'gym-id',
+        gymId: 'gym-id',
         user_id: 'user-id',
         userLatitude: -2.9097984,
         userLongitude: -41.7700434,
@@ -146,7 +146,7 @@ describe('Check-in Use Case', () => {
     })
 
     const { checkIn } = await sut.execute({
-      gym_id: 'gym-id',
+      gymId: 'gym-id',
       user_id: 'user-id',
       userLatitude: -27.0747279,
       userLongitude: -49.4889672,
@@ -168,7 +168,7 @@ describe('Check-in Use Case', () => {
     })
 
     const { checkIn } = await sut.execute({
-      gym_id: 'gym-id',
+      gymId: 'gym-id',
       user_id: 'user-id',
       userLatitude: -27.0747279,
       userLongitude: -49.4889672,

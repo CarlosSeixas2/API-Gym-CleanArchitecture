@@ -8,7 +8,7 @@ import { MaxDistanceError } from './errors/max-distance-error'
 
 interface CheckInUseCaseRequest {
   user_id: string
-  gym_id: string
+  gymId: string
   userLatitude: number
   userLongitude: number
 }
@@ -25,11 +25,11 @@ export class CheckInUseCase {
 
   async execute({
     user_id,
-    gym_id,
+    gymId,
     userLatitude,
     userLongitude,
   }: CheckInUseCaseRequest): Promise<CheckInUseCaseResponse> {
-    const gym = await this.gymsRepository.findById(gym_id)
+    const gym = await this.gymsRepository.findById(gymId)
 
     if (!gym) {
       throw new ResourceNotFoundError()
@@ -63,7 +63,7 @@ export class CheckInUseCase {
 
     const checkIn = await this.checkinsRepository.create({
       user_id,
-      gym_id,
+      gymId,
     })
 
     return {
