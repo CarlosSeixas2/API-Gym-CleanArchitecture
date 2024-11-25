@@ -1,8 +1,8 @@
 import { app } from '@/app'
 import { afterAll, beforeAll, describe, expect, it } from 'vitest'
 import request from 'supertest'
-import { createAuthenticateUser } from '@/utils/test/create-and-authenticate-user'
 import { prisma } from '@/lib/prisma'
+import { createAndAuthenticateUser } from '@/utils/test/create-and-authenticate-user'
 
 describe('Check-in Metrics (e2e)', () => {
   beforeAll(async () => {
@@ -14,7 +14,7 @@ describe('Check-in Metrics (e2e)', () => {
   })
 
   it('should be able to get the count of check-ins', async () => {
-    const { token } = await createAuthenticateUser(app)
+    const { token } = await createAndAuthenticateUser(app)
 
     const user = await prisma.user.findFirstOrThrow()
 
