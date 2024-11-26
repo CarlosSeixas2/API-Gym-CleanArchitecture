@@ -25,7 +25,7 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: sudo npm run pretest:e2e  
-      - run: npm run test:e2e
+      - run: npm run teste2e
         env:
             JWT_SECRET: testing
             DATABASE_URL: "postgres://postgres:1234@localhost:5433/apisolid"
